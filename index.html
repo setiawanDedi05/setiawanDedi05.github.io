@@ -97,7 +97,7 @@
 
             <div class="home__info">
                <p class="home__description">
-                  <b>Frontend Developer</b>, with 3 years experience in web development and mobile development, i work
+                  <b>Frontend Developer</b>, with <span id="experience-years">3</span> years experience in web development and mobile development, i work
                   every projects in best practice and component base.
                </p>
 
@@ -388,6 +388,17 @@
 
    <!--=============== MAIN JS ===============-->
    <script src="assets/js/main.js"></script>
+
+   <script>
+     const startYear = 2022;
+     const currentYear = new Date().getFullYear();
+     
+     // Menghitung selisih tahun (2026 - 2022 = 4)
+     const yearsOfExperience = currentYear - startYear;
+     
+     // Memasukkan angka hasil perhitungan ke dalam span
+     document.getElementById('experience-years').textContent = yearsOfExperience;
+   </script>
 </body>
 
 </html>
